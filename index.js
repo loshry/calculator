@@ -1,29 +1,38 @@
-// add function
-const addNumber = (number1, number2) => {
-    return (number1 + number2);
-};
 
-console.log(addNumber(2,1));
+// identify the number buttons
+const numberButtons = document.querySelectorAll(".number__buttonnumber");
 
-// subtract function
-const subtractNumber = (number1, number2) => {
-    return (number1 - number2);
-};
+const operandButtons = document.querySelectorAll(".operand__buttonoperand");
 
-console.log(subtractNumber(8,2));
+const equalsbutton = document.querySelector(".operand__results");
 
-// multiply function
-const multiplyNumber = (number1, number2) => {
-    return (number1 * number2);
-};
+const clearResultsButton = document.querySelector(".top-buttons__clear");
 
-console.log (multiplyNumber(7,8));
+const plusMinusButton = document.querySelector(".top-buttons__plusminus");
 
-// divide function
-const divideNumber = (number1, number2) => {
-    return (number1 / number2);
-};
+const percentageButton = document.querySelector(".top-buttons__percent");
 
-console.log(divideNumber(100, 10));
+const display = document.getElementsByTagName("input")[0];
 
 
+// clear results
+
+clearResultsButton.addEventListener("click" , () => {
+    display.value = "";
+}  );
+
+// select numbers
+let operand1 = "";
+numberButtons.forEach((button) => {
+    button.addEventListener("click", () => 
+    
+    { 
+   display.value.concat(button);
+    });
+    
+    console.log(display.value);
+});
+    // const buttonFive = document.getElementById("five")
+
+    // buttonFive.addEventListener("click" , () => {
+    //     display.value = buttonFive.innerHTML; });
